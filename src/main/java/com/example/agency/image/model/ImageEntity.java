@@ -1,4 +1,4 @@
-package com.example.agency.image;
+package com.example.agency.image.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
