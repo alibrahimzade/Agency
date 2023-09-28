@@ -1,5 +1,8 @@
 package com.example.agency.dto;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.OneToMany;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -11,6 +14,6 @@ import lombok.experimental.FieldDefaults;
 public class AddressDto {
 
     Long id;
-
     String name;
+
 }
