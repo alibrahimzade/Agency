@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -19,6 +21,8 @@ public class Address {
 
     String name;
 
-    String imageOfService;
-
+    @OneToMany(mappedBy = "address",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY)
+    List<Project> projects;
 }

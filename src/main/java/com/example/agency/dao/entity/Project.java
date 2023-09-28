@@ -1,5 +1,6 @@
 package com.example.agency.dao.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -18,4 +19,8 @@ public class Project {
     Long id;
 
     String name;
+    @ManyToOne
+    @JoinColumn(name = "address_id")
+    @JsonIgnore
+    Address address;
 }
